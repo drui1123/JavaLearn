@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Lesson01-HelloWorld-app/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/Lesson01-HelloWorld-app/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson01-app/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/Lesson01-app/HelloWorld/HelloWorld.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaLearn.iml" filepath="$PROJECT_DIR$/JavaLearn.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lesson01-HelloWorld-app/Lesson01-HelloWorld-app.iml" filepath="$PROJECT_DIR$/Lesson01-HelloWorld-app/Lesson01-HelloWorld-app.iml" />
     </modules>
   </component>
 </project>

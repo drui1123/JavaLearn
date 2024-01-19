@@ -1,4 +1,4 @@
-package com.heima.hello;
+package HeimaLesson1.hello;
 
 public class HelloWorld {
     public static void main(String[] args) {
