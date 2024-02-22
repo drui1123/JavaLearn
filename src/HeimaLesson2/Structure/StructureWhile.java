@@ -7,7 +7,7 @@ package HeimaLesson2.Structure;
 public class StructureWhile {
 
     public static void main(String[] args) {
-        // 珠穆朗玛峰案例：纸折叠多少次后达到珠穆朗玛峰高度
+        //珠穆朗玛峰案例：纸折叠多少次后达到珠穆朗玛峰高度
         double PeakHeight = 8848860; // 珠穆朗玛峰的高度
         double PaperThickness = 0.1; // 纸张的厚度
         int count = 0; // 折叠的次数

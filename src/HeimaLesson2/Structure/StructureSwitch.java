@@ -17,7 +17,7 @@ public class StructureSwitch {
             case "周二":
             case "周三":
             case "周四":
-                System.out.println("今天开会"); // 不写break时，向下具有穿透性，顺序执行到第一个break
+                System.out.println("今天开会"); //不写break时，向下具有穿透性，顺序执行到第一个break
                 break;
             case "周五":
                 System.out.println("今天回家");
