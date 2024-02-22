@@ -2,7 +2,7 @@ package HeimaLesson3.Array;
 
 import java.util.Arrays;
 
-public class ArrayDemo1 {
+public class Array_GetSum {
     /*某部门5个员工的销售额分别是：16、26、36、6、100，计算部门总销售额*/
     public static void main(String[] args) {
         int[] sales = {16,26,36,6,100};
