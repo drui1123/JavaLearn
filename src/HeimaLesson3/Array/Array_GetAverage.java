@@ -1,9 +1,8 @@
 package HeimaLesson3.Array;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayDemo2 {
+public class Array_GetAverage {
     /*某歌唱比赛需要录入6名评委打分，录入完毕后输出平均分*/
 
     public static void main(String[] args) {
