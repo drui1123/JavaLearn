@@ -2,7 +2,7 @@ package HeimaLesson5.Sample;
 
 import java.util.Random;
 
-public class VerificationCode {
+public class VerifyCode {
     /*生成一个指定位数的随机验证码，内容包括数字、大小写字母
      * */
     public static void main(String[] args) {
