@@ -8,9 +8,9 @@ public class Hongbao {
     * */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int times = 2;
+        int times = 0;
         double[] money = {11,22,33,44,55};
-    /*    System.out.println("请输入抢红包的人数：");
+        System.out.print("请输入抢红包的人数：");
         while (true){
             times = sc.nextInt();
             if (times > money.length){
@@ -18,34 +18,29 @@ public class Hongbao {
                 continue;
             }
             break;
-        }*/
+        }
         GetHongbao(money,money.length,times);
     }
 
-    // 按次数抽红包
+    // 按次数抽红包，number为所剩红包个数，times为所剩抽红包次数
     public static void GetHongbao(double[] money, int number ,int times){
-        while (times >= 1) {
+        if (times >= 1) {
             Random random = new Random();
             int LuckyIndex = random.nextInt(number);
             money = OutHongbao(money, LuckyIndex);
             times--;
             number--;
-            GetHongbao(money, number ,times);
+            GetHongbao(money, number, times);
         }
     }
 
-    // 单次取出指定顺序的红包
+    // 单次取出指定顺序的红包,返回抽完后的红包数组
     public static double[] OutHongbao(double[] money, int index){
-        double[] NewMoney = new double[money.length];
         System.out.println("本次抽取的红包为：" + money[index]);
-        for (int i = 0; i < money.length - 1; i++) {
-            if (i < index) {
-                NewMoney[i] = money[i];
+        for (int i = index; i < money.length - 1; i++) {
+            money[i] = money[i+1];
             }
-            else {NewMoney[i] = money[i+1];
-            }
-            }
-        return NewMoney;
+        return money;
     }
 
 }
