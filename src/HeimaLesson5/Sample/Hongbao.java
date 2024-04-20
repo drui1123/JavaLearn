@@ -27,7 +27,7 @@ public class Hongbao {
         if (times >= 1) {
             Random random = new Random();
             int LuckyIndex = random.nextInt(number);
-            money = OutHongbao(money, LuckyIndex);
+            OutHongbao(money, LuckyIndex);
             times--;
             number--;
             GetHongbao(money, number, times);
@@ -35,12 +35,12 @@ public class Hongbao {
     }
 
     // 单次取出指定顺序的红包,返回抽完后的红包数组
-    public static double[] OutHongbao(double[] money, int index){
+    public static void OutHongbao(double[] money, int index){
         System.out.println("本次抽取的红包为：" + money[index]);
         for (int i = index; i < money.length - 1; i++) {
             money[i] = money[i+1];
             }
-        return money;
+//        return money;
     }
 
 }
