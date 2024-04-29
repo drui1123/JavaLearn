@@ -64,12 +64,22 @@ public class LottoSimulate {
         return target;
     }
 
-
     // 判断中奖
     public static void IsHit(int[] bet, int[] target){
-        int[] flags = EqualFlags(bet , target);
+        int[] bet_copy = CopyArray(bet);
+        int[] target_copy = CopyArray(target);
+        int[] flags = EqualFlags(bet_copy , target_copy);
         int hit_blue = flags[flags.length-1]; // 蓝球中奖个数
-        int hit_red = ArraySum(flags) - hit_blue; // 红球中奖个数
+        // 红球中奖个数
+        target_copy[target_copy.length-1] = -1;
+        bet_copy[bet_copy.length-1] = 0;
+        int hit_red = 0;
+        for (int j:bet_copy){
+            if (IsExist(target_copy,j)){
+                hit_red++;
+            }
+        }
+        System.out.println("您中了红球" + hit_red + "个、蓝球" + hit_blue + "个;");
         if (hit_blue == 1){
             switch (hit_red){
                 case 6:
@@ -127,13 +137,14 @@ public class LottoSimulate {
         return flags;
     }
 
-    // 数组元素求和
-    public static int ArraySum(int[] arr) {
-        int sum = 0;
-        for (int j : arr) {
-            sum += j;
+    // 复制数组
+    public static int[] CopyArray(int[] arr) {
+        int[] arr2 = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            arr2[i] = arr[i];
         }
-        return sum;
+
+        return arr2;
     }
 
     // 打印输出数组所有元素
@@ -150,6 +161,4 @@ public class LottoSimulate {
         }
         System.out.println("]");
     }
-
-
 }
