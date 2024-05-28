@@ -22,12 +22,12 @@ public class FilmSample {
 
         FilmOperator filmoperator = new FilmOperator(films);
 
+        Scanner sc = new Scanner(System.in);
 
         while (true) {
             System.out.println("===电影信息系统===");
             System.out.println("输入数字1:查询全部电影信息");
             System.out.println("输入数字2:根据编号查询电影信息");
-            Scanner sc = new Scanner(System.in);
             int order = sc.nextInt();
             Input:
             switch (order){
