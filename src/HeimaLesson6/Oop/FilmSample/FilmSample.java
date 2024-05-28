@@ -29,7 +29,6 @@ public class FilmSample {
             System.out.println("输入数字1:查询全部电影信息");
             System.out.println("输入数字2:根据编号查询电影信息");
             int order = sc.nextInt();
-            Input:
             switch (order){
                 case 1:
                     filmoperator.PrintAllFilms();
